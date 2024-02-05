@@ -25,19 +25,24 @@ export default function Tab1() {
         </Tabs.List>
 
         <Tabs.Content value="tab1">
-          <H5>Dashboard</H5>
+          <Text textAlign="left" fontSize="36px" fontWeight="900">DASHBOARD</Text>
+          <Text textAlign="left" fontSize="36px" fontWeight="900" color="#ff2900">FILMS</Text>
           <CardDemo></CardDemo>
           <CardDemo></CardDemo>
           <CardDemo></CardDemo>
         </Tabs.Content>
+        
         <Tabs.Content value="tab2">
-          <H5>Scenes</H5>
-          <CardDemo></CardDemo>
+        <Text textAlign="left" fontSize="36px" fontWeight="900">FILM 1</Text>
+          <Text textAlign="left" fontSize="36px" fontWeight="900" color="#ff2900">SCENES</Text>
+          <CardDemo>HOLA</CardDemo>
           <CardDemo></CardDemo>
           <CardDemo></CardDemo>
         </Tabs.Content>
+
         <Tabs.Content value="tab3">
-          <H5>Character</H5>
+          <Text textAlign="left" fontSize="36px" fontWeight="900">SCENE 1</Text>
+          <Text textAlign="left" fontSize="36px" fontWeight="900" color="#ff2900">CHARACTER</Text>
           <CardDemo></CardDemo>
           <CardDemo></CardDemo>
           <CardDemo></CardDemo>

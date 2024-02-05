@@ -1,53 +1,67 @@
+import React from 'react';
+import { Image } from 'react-native'; 
+import { Link, useRouter } from 'expo-router';
 import { Github, Twitter, Swords, Film} from "@tamagui/lucide-icons";
-import { Link, useRouter } from "expo-router";
 import {
   Button,
   H1,
+  Text,
   ListItem,
   Paragraph,
   Separator,
   YGroup,
-  YStack
-} from "tamagui";
+  YStack,
+} from 'tamagui';
 
-import { MySafeAreaView } from "../components/MySafeAreaView";
-import { MyStack } from "../components/MyStack";
+import { MySafeAreaView } from '../components/MySafeAreaView';
+import { MyStack } from '../components/MyStack';
 
 export default function Home() {
   const router = useRouter();
-
   return (
     <MySafeAreaView>
       <MyStack style={{ backgroundColor: '#350A24' }}>
         <YStack
           space="$4"
           maxWidth={400}
-          alignSelf="center"   
+          alignSelf="center"
         >
-          <H1 textAlign="center" >MOVIE MAKING</H1>
+        </YStack>
+        <YStack space="$3">
+          <Image
+            source={require("../assets/IconsImg/movie-recorder.png")}
+            style={{
+              width: 277,
+              height: 243,
+              alignSelf: 'center',
+              borderRadius: 10,
+            }}
+          />
+          <Text textAlign="center" fontSize="48px" fontWeight="900">MAKE</Text>
+          <Text textAlign="center" fontSize="50px" fontWeight="900">RINGS</Text>
+         {/* <H1 textAlign="center" >MAKE</H1>
+          <H1 textAlign="center">RINGS</H1>*/}
           <Paragraph textAlign="center">
             THE LORD OF THE RINGS
           </Paragraph>
-        </YStack>
-        <YStack space="$3">
-          <Button onPress={() => router.push("/users/testuser")}>
+          {/*<Button onPress={() => router.push("/users/testuser")}>
             Go to user page
-          </Button>
-          <Button onPress={() => router.push("/tabs")}>Go to tabs page</Button>
-          <Button onPress={() => router.push("/tabs")} alignSelf="center" icon={Swords} size="$5.5" theme="active" color="#fff" style={{ backgroundColor: '#752D59' }}>
-        Begin
-      </Button>
+          </Button>*/}
+       {/*<Button onPress={() => router.push("/tabs")}>Go to tabs page</Button>*/}
+          <Button onPress={() => router.push("/tabs")} alignSelf="center" icon={Swords} size="$6" theme="red" color="#fff" style={{ backgroundColor: '#752D59' }}>
+            CREATE
+          </Button >
         </YStack>
         <YStack space="$5">
           <YGroup
             bordered
             separator={<Separator />}
-            theme="green"
+            theme="red"
           >
             <YGroup.Item>
               <Link
                 asChild
-                href="https://twitter.com/natebirdman"
+                href="https://www.instagram.com/isaacsguerra_/"
                 target="_blank"
               >
                 <ListItem
@@ -61,7 +75,7 @@ export default function Home() {
             <YGroup.Item>
               <Link
                 asChild
-                href="https://github.com/tamagui/tamagui"
+                href="https://github.com/isacsebastiann"
                 target="_blank"
               >
                 <ListItem

@@ -10,7 +10,7 @@ export default function Layout() {
       <Tabs.Screen
         name="tab1"
         options={{
-          title: "Tab 1",
+          title: "DASBOARD FILMS",
           tabBarIcon(props) {
             return (
               <MaterialCommunityIcons
@@ -23,9 +23,10 @@ export default function Layout() {
             return (
               <Button
                 ml="$2.5"
+                style={{ backgroundColor: '#752D59' }}
                 onPress={() => router.push("/")}
               >
-                <MaterialCommunityIcons name="arrow-left" />
+                <MaterialCommunityIcons name="arrow-left" color={"#fff"}/>
               </Button>
             );
           }
@@ -34,7 +35,7 @@ export default function Layout() {
       <Tabs.Screen
         name="tab2"
         options={{
-          title: "Tab 2",
+          title: "InputDemo",
           tabBarIcon(props) {
             return (
               <MaterialCommunityIcons
@@ -47,6 +48,7 @@ export default function Layout() {
             return (
               <Button
                 ml="$2.5"
+                style={{ backgroundColor: '#ff2900' }}
                 onPress={() => router.push("/")}
               >
                 <MaterialCommunityIcons name="arrow-left" />
