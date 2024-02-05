@@ -1,4 +1,4 @@
-import { Github, Twitter } from "@tamagui/lucide-icons";
+import { Github, Twitter, Swords, Film} from "@tamagui/lucide-icons";
 import { Link, useRouter } from "expo-router";
 import {
   Button,
@@ -18,25 +18,26 @@ export default function Home() {
 
   return (
     <MySafeAreaView>
-      <MyStack>
+      <MyStack style={{ backgroundColor: '#350A24' }}>
         <YStack
           space="$4"
-          maxWidth={600}
+          maxWidth={400}
+          alignSelf="center"   
         >
-          <H1 textAlign="center">Welcome to Tamagui.</H1>
+          <H1 textAlign="center" >MOVIE MAKING</H1>
           <Paragraph textAlign="center">
-            Here&apos;s a basic starter to show navigating from one screen to
-            another.
+            THE LORD OF THE RINGS
           </Paragraph>
         </YStack>
-
-        <YStack space="$2.5">
+        <YStack space="$3">
           <Button onPress={() => router.push("/users/testuser")}>
             Go to user page
           </Button>
           <Button onPress={() => router.push("/tabs")}>Go to tabs page</Button>
+          <Button onPress={() => router.push("/tabs")} alignSelf="center" icon={Swords} size="$5.5" theme="active" color="#fff" style={{ backgroundColor: '#752D59' }}>
+        Begin
+      </Button>
         </YStack>
-
         <YStack space="$5">
           <YGroup
             bordered

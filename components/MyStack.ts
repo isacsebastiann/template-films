@@ -5,6 +5,14 @@ export const MyStack = styled(YStack, {
   backgroundColor: "$backgroundStrong",
   flex: 1,
   justifyContent: "space-between",
-  padding: "$4",
+  padding: "$3",
   space: "$true"
+});
+
+export const MySecondaryStack = styled(YStack, {
+  name: "MySecondaryStack",
+  backgroundColor: "$backgroundWeak", 
+  flex: 1,
+  alignItems: "center", 
+  justifyContent: "center", 
 });
