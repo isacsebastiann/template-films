@@ -1,20 +1,20 @@
 import { H5, Tabs, Text } from "tamagui";
 import { MySecondaryStack } from "../../components/MyStack";
-import { CardScene } from "../../components/CardScenes";
+import {DialogDemo} from "../../components/DialogDemo";
 
-export default function Tab2() {
+export default function sectionfilm() {
   return (
-    <MySecondaryStack style={{ backgroundColor: '#350A24', justifyContent: 'center' }}>
+    <MySecondaryStack style={{ backgroundColor: '#ff2900', justifyContent: 'center' }}>
       <Tabs
-        defaultValue="tab2"
+        defaultValue="sectionfilm"
         orientation="horizontal"
         flexDirection="column"
         width="100%"
       >
-        <Tabs.Content value="tab2">
+        <Tabs.Content value="sectionfilm">
         <Text textAlign="left" fontSize="36px" fontWeight="900">FILM 1</Text>
           <Text textAlign="left" fontSize="36px" fontWeight="900" color="#ff2900">SCENES</Text>
-          <CardScene></CardScene>
+          <DialogDemo></DialogDemo>
         </Tabs.Content>
       </Tabs>
     </MySecondaryStack>

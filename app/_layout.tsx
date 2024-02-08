@@ -30,6 +30,7 @@ export default function Layout() {
   if (!loaded) return null;
 
   return (
+    //<QueryClientProvider client={queryClient}>
     <TamaguiProvider config={config}>
       <Suspense fallback={<Text>Loading...</Text>}>
         <Theme name={colorScheme}>

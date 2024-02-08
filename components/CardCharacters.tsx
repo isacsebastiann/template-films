@@ -4,8 +4,7 @@ import type { CardProps } from 'tamagui';
 import { Button, Card, H2, Image, Paragraph, XStack } from 'tamagui';
 import { Pencil, Trash } from '@tamagui/lucide-icons';
 
-
-export function CardDemo() {
+export function CardDemoCharacter() {
   return (
     <XStack $sm={{ flexDirection: 'column' }} alignItems="center" paddingHorizontal="$4" space>
       <DemoCard
@@ -17,12 +16,12 @@ export function CardDemo() {
         hoverStyle={{ scale: 0.925 }}
         pressStyle={{ scale: 0.875 }}
       />
-      <DemoCard size="$5" width={350} height={150} />
+      <CardCharacter size="$5" width={350} height={150} />
     </XStack>
   );
 }
 
-export function DemoCard(props: CardProps) {
+export function CardCharacter(props: CardProps) {
   const navigation = useNavigation(); // Usar useNavigation
 
   return (
@@ -33,8 +32,8 @@ export function DemoCard(props: CardProps) {
       </Card.Header>
       <Card.Footer padded>
         <XStack flex={1} />
-        <Button borderRadius="$20" ml="$2.5" icon={Pencil} onPress={() => navigation.navigate('')}>EDIT</Button>
-        <Button borderRadius="$20" ml="$2.5" icon={Trash} onPress={() => navigation.navigate('tab2')}>DELETE</Button>
+        <Button borderRadius="$20" ml="$2.5" icon={Pencil} onPress={() => navigation.navigate('tab3')}>EDIT</Button>
+        <Button borderRadius="$20" ml="$2.5" icon={Trash} onPress={() => navigation.navigate('tab3')}>DELETE</Button>
       </Card.Footer>
       <Card.Background>
         <Image
@@ -46,11 +45,7 @@ export function DemoCard(props: CardProps) {
             uri: 'https://img.freepik.com/vector-gratis/fondo-negro-degradado-lineas-onduladas_23-2149157312.jpg',
           }}
         />
-
       </Card.Background>
-
     </Card>
-
-  )
-
+  );
 }

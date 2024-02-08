@@ -35,7 +35,7 @@ export default function Layout() {
       <Tabs.Screen
         name="tab2"
         options={{
-          title: "InputDemo",
+          title: "SCENES",
           tabBarIcon(props) {
             return (
               <MaterialCommunityIcons
@@ -52,6 +52,31 @@ export default function Layout() {
                 onPress={() => router.push("/")}
               >
                 <MaterialCommunityIcons name="arrow-left" />
+              </Button>
+            );
+          }
+        }}
+      />
+      <Tabs.Screen
+        name="tab3"
+        options={{
+          title: "CHARACTERS",
+          tabBarIcon(props) {
+            return (
+              <MaterialCommunityIcons
+                name="account-group"
+                {...props}
+              />
+            );
+          },
+          headerLeft() {
+            return (
+              <Button
+                ml="$2.5"
+                style={{ backgroundColor: '#fff' }}
+                onPress={() => router.push("/")}
+              >
+                <MaterialCommunityIcons name="arrow-right" />
               </Button>
             );
           }

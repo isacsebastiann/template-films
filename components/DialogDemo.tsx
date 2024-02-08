@@ -18,7 +18,7 @@ export default function DialogDemo() {
     <Dialog modal>
       <Dialog.Trigger asChild>
         <Button>Edit Profile</Button>
-      </Dialog.Trigger>
+  </Dialog.Trigger>
 
       <Adapt
         when="sm"

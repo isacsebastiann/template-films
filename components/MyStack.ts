@@ -2,7 +2,7 @@ import { styled, YStack } from "tamagui";
 
 export const MyStack = styled(YStack, {
   name: "MyStack",
-  /*backgroundColor: "$backgroundStrong",*/
+  backgroundColor: "$backgroundStrong",
   flex: 1,
   justifyContent: "space-between",
   padding: "$3",
@@ -11,8 +11,9 @@ export const MyStack = styled(YStack, {
 
 export const MySecondaryStack = styled(YStack, {
   name: "MySecondaryStack",
-  backgroundColor: "$backgroundWeak", 
+  backgroundColor: "$backgroundStrong",
   flex: 1,
-  alignItems: "center", 
-  justifyContent: "center", 
+  justifyContent: "space-between",
+  padding: "$3",
+  space: "$true",
 });
