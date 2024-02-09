@@ -39,7 +39,7 @@ export default function Layout() {
           tabBarIcon(props) {
             return (
               <MaterialCommunityIcons
-                name="two-factor-authentication"
+                name="filmstrip"
                 {...props}
               />
             );
@@ -82,6 +82,68 @@ export default function Layout() {
           }
         }}
       />
+      <Tabs.Screen
+        name="tab4"
+        options={{
+          title: "REVIEWS",
+          tabBarIcon(props) {
+            return <MaterialCommunityIcons name="star" {...props} />;
+          },
+          headerLeft() {
+            return (
+              <Button
+                ml="$2.5"
+                style={{ backgroundColor: '#123456' }} // Cambia el color según tu diseño
+                onPress={() => router.push("/reviews")}
+              >
+                <MaterialCommunityIcons name="arrow-left" color={"#fff"}/>
+              </Button>
+            );
+          }
+        }}
+      />
+       {/*<Tabs.Screen
+        name="tab5"
+        options={{
+          title: "FORMS",
+          tabBarIcon(props) {
+            return <MaterialCommunityIcons name="star" {...props} />;
+          },
+          headerLeft() {
+            return (
+              <Button
+                ml="$2.5"
+                style={{ backgroundColor: '#123456' }} // Cambia el color según tu diseño
+                onPress={() => router.push("/reviews")}
+              >
+                <MaterialCommunityIcons name="arrow-left" color={"#fff"}/>
+              </Button>
+            );
+          }
+        }}
+      />
+      <Tabs.Screen
+        name="tab6"
+        options={{
+          title: "FORMS",
+          tabBarIcon(props) {
+            return <MaterialCommunityIcons name="star" {...props} />;
+          },
+          headerLeft() {
+            return (
+              <Button
+                ml="$2.5"
+                style={{ backgroundColor: '#123456' }} // Cambia el color según tu diseño
+                onPress={() => router.push("/reviews")}
+              >
+                <MaterialCommunityIcons name="arrow-left" color={"#fff"}/>
+              </Button>
+            );
+          }
+        }}
+      />
+      */}
     </Tabs>
   );
 }
+

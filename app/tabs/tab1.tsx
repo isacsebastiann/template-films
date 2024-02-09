@@ -1,27 +1,29 @@
 import React from 'react';
 import { H5, Tabs, Text, Button } from "tamagui";
 import { MySecondaryStack } from "../../components/MyStack";
-import { CardDemo } from "../../components/Card";
+import { CardDemo, DemoCard } from "../../components/CardFilm";
+
 
 const styles = {
   stack: {
-    backgroundColor: '#350A24',
+    backgroundColor: '#12222F',
     justifyContent: 'center',
   },
   tabContent: {
     flexDirection: 'column',
+    backgroundColor: '#12222F',
     width: '100%', 
   },
   dashboardText: {
     textAlign: 'left',
-    fontSize: '36px',
+    fontSize: '36',
     fontWeight: '900',
   },
   filmsText: {
     textAlign: 'left',
-    fontSize: '36px',
+    fontSize: '36',
     fontWeight: '900',
-    color: '#ff2900',
+    color: '#E2B550',
   },
 };
 
@@ -36,7 +38,7 @@ export default function Tab1() {
         <Tabs.Content value="tab1">
           <Text style={styles.dashboardText}>DASHBOARD</Text>
           <Text style={styles.filmsText}>FILMS</Text>
-          <CardDemo />
+          <DemoCard></DemoCard>
         </Tabs.Content>
       </Tabs>
     </MySecondaryStack>

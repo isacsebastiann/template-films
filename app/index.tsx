@@ -1,9 +1,7 @@
 import React from 'react';
-import { Image } from 'react-native'; 
-import { Swords } from "@tamagui/lucide-icons";
-import { Github, Twitter,Film} from "@tamagui/lucide-icons";
+import { Image } from 'react-native';
+import { Github, Twitter, Swords } from "@tamagui/lucide-icons";
 import { Link, useRouter } from 'expo-router';
-
 import {
   Button,
   Text,
@@ -24,7 +22,7 @@ const GITHUB_TEMPLATE_URL = "https://github.com/ivopr/tamagui-expo";
 export default function Home() {
   const router = useRouter();
 
-  const imageStyle = {
+const imageStyle = {
     padding: 20,
     width: 277,
     height: 243,
@@ -32,11 +30,11 @@ export default function Home() {
     borderRadius: 10,
   };
 
-  return (
+return (
     <MySafeAreaView>
       <MyStack style={styles.container}>
         <Image
-          source={require("../assets/IconsImg/movie-recorder.png")}
+          source={require("../assets/IconsImg/logoo.png")}
           style={imageStyle}
         />
         <TitleAndSubtitle />
@@ -49,9 +47,9 @@ export default function Home() {
 
 const TitleAndSubtitle = () => (
   <YStack space="$3">
-    <Text textAlign="center" fontSize="48px" fontWeight="900">MAKE</Text>
-    <Text textAlign="center" fontSize="50px" fontWeight="900">RINGS</Text>
-    <Paragraph textAlign="center">THE LORD OF THE RINGS</Paragraph>
+    <Text textAlign="center" fontSize="50" fontWeight="900">MAKE MOVIE</Text>
+    <Paragraph textAlign="center" fontSize="25" theme="blue">"Un Anillo para gobernarlos a todos."
+</Paragraph>
   </YStack>
 );
 
@@ -59,10 +57,9 @@ const CreateButton = ({ onPress }) => (
   <Button
     onPress={onPress}
     alignSelf="center"
+    theme="blue"    color="#333"
     icon={Swords}
     size="$6"
-    theme="red"
-    color="#fff"
     style={styles.createButton}
   >
     CREATE
@@ -71,10 +68,9 @@ const CreateButton = ({ onPress }) => (
 
 const SocialLinks = () => (
   <YStack space="$5">
-    <YGroup bordered separator={<Separator />} theme="red">
-      <SocialLinkItem href={INSTAGRAM_URL} title="Nate" icon={Twitter} />
-      <SocialLinkItem href={GITHUB_USER_URL} title="Tamagui" icon={Github} />
-      <SocialLinkItem href={GITHUB_TEMPLATE_URL} title="This Template" icon={Github} />
+    <YGroup bordered separator={<Separator />} theme="blue">
+      <SocialLinkItem href={INSTAGRAM_URL} title="Instagram" icon={Twitter} />
+      <SocialLinkItem href={GITHUB_USER_URL} title="Github" icon={Github} />
     </YGroup>
   </YStack>
 );
@@ -87,9 +83,9 @@ const SocialLinkItem = ({ href, title, icon }) => (
 
 const styles = {
   container: {
-    backgroundColor: '#350A24',
+    backgroundColor: '#12222F',
   },
   createButton: {
-    backgroundColor: '#752D59',
+    backgroundColor: '#E2B550',
   },
 };

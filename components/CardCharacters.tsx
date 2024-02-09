@@ -1,51 +1,64 @@
 import React from 'react';
-import { useNavigation } from '@react-navigation/native'; // Importar useNavigation
+// Importaciones necesarias de Tamagui y expo-router
+import { Card, H2, Paragraph, XStack, Button, Image } from 'tamagui';
+import { UserRoundCheck, Trash, Pencil } from '@tamagui/lucide-icons';
+import { useRouter } from "expo-router";
 import type { CardProps } from 'tamagui';
-import { Button, Card, H2, Image, Paragraph, XStack } from 'tamagui';
-import { Pencil, Trash } from '@tamagui/lucide-icons';
-
-export function CardDemoCharacter() {
-  return (
-    <XStack $sm={{ flexDirection: 'column' }} alignItems="center" paddingHorizontal="$4" space>
-      <DemoCard
-        animation="bouncy"
-        size="$4"
-        width={350}
-        height={150}
-        scale={0.9}
-        hoverStyle={{ scale: 0.925 }}
-        pressStyle={{ scale: 0.875 }}
-      />
-      <CardCharacter size="$5" width={350} height={150} />
-    </XStack>
-  );
-}
 
 export function CardCharacter(props: CardProps) {
-  const navigation = useNavigation(); // Usar useNavigation
+  const router = useRouter(); // Usar useRouter para la navegación
+
+  // Funciones para manejar la navegación
+  const handleButtonClick = () => {
+    router.push("/components/Forms"); 
+  };
+  
+  const handleCardClick = () => {
+    router.push("/tabs/tab2"); // Navegar a la pestaña 2
+  };
+
+  // Función para navegar al DialogDemo
+  const navigateToDialogDemo = () => {
+    router.push("../components/DialogDemo"); // Ajusta esta ruta según tu configuración
+  };
 
   return (
-    <Card elevate size="$4" bordered {...props}>
+    <Card elevate size="$4" bordered {...props} onPress={handleCardClick}>
+
       <Card.Header padded>
-        <H2>Sony A7IV</H2>
+        <H2>Legolas</H2>
         <Paragraph theme="alt2">Now available</Paragraph>
+        <Paragraph>id</Paragraph>
+        <Paragraph>name</Paragraph>
+        <Paragraph>actor_name</Paragraph>
+        <Paragraph>race</Paragraph>
+        <Paragraph>alignment</Paragraph>
+        <Paragraph>backstory</Paragraph>
+        <Paragraph>appearance_in_films</Paragraph>
+        <Paragraph>cost</Paragraph>
+        <Paragraph>stock</Paragraph>
+        <Paragraph>scene_id</Paragraph>
+
       </Card.Header>
+
       <Card.Footer padded>
         <XStack flex={1} />
-        <Button borderRadius="$20" ml="$2.5" icon={Pencil} onPress={() => navigation.navigate('tab3')}>EDIT</Button>
-        <Button borderRadius="$20" ml="$2.5" icon={Trash} onPress={() => navigation.navigate('tab3')}>DELETE</Button>
+        <Button borderRadius="$20" ml="$2.5" icon={UserRoundCheck} onPress={handleButtonClick}>SELECT</Button>
+        <Button icon={Pencil} onPress={navigateToDialogDemo}></Button>
       </Card.Footer>
+
       <Card.Background>
         <Image
           resizeMode="contain"
           alignSelf="center"
           source={{
-            width: 300,
-            height: 300,
-            uri: 'https://img.freepik.com/vector-gratis/fondo-negro-degradado-lineas-onduladas_23-2149157312.jpg',
+            width: 100,
+            height: 100,
+            uri: 'https://static.wikia.nocookie.net/bibliotecadelatierramedia/images/c/c0/Legolas.jpg/revision/latest?cb=20140322121446&path-prefix=es',
           }}
         />
       </Card.Background>
+
     </Card>
   );
 }

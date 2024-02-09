@@ -10,7 +10,7 @@ export function Characterpost() {
 
     <YStack>
         <H1  style={styles.dashText}>CHARACTER</H1>
-        <Image source={require('../assets/film.jpg')} style={styles.imageStyle}/>
+        <Image source={require("../assets/IconsImg/movie-recorder.png")} style={styles.imageStyle}/>
    <XStack justifyContent="center" alignItems="center">
         <H1 style={styles.text}>Description</H1>
       </XStack>
